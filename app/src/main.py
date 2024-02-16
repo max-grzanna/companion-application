@@ -78,7 +78,7 @@ class SampleApp(VehicleApp):
         # - Publishes current speed to MQTT Topic (i.e. DATABROKER_SUBSCRIPTION_TOPIC).
         await self.publish_event(
             DATABROKER_SUBSCRIPTION_TOPIC,
-            json.dumps({"speed": vehicle_speed}),
+            json.dumps({"vehicle speed: ": vehicle_speed}),
         )
 
     @subscribe_topic(GET_SPEED_REQUEST_TOPIC)
